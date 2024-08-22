@@ -5,7 +5,7 @@
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
-  "main": "bin/gendiff.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +21,15 @@
   "type": "module",
   "homepage": "https://github.com/hidoshik/frontend-project-46#readme",
   "dependencies": {
-    "commander": "^12.1.0"
+    "commander": "^12.1.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "globals": "^15.9.0",
+    "prettier": "^3.3.3"
   }
 }
