@@ -1,5 +1,7 @@
 const parsers = {
-    json: JSON.parse,
-}
+  json: JSON.parse,
+};
 
-export const parse = (data, format) => parsers[format](data);
+const parse = (data, format) => parsers[format](data);
+
+export default parse;
