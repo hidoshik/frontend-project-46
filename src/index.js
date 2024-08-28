@@ -29,17 +29,17 @@ const genDiff = (data1, data2) => {
     const dataDiff2 = `${key}: ${data2[key]}`;
 
     if (!Object.hasOwn(data1, key)) {
-      return `+ ${dataDiff2}`;
+      return `  + ${dataDiff2}`;
     }
     if (!Object.hasOwn(data2, key)) {
-      return `- ${dataDiff1}`;
+      return `  - ${dataDiff1}`;
     }
     if (data1[key] === data2[key]) {
-      return `  ${dataDiff1}`;
+      return `    ${dataDiff1}`;
     }
     return [
-      `- ${dataDiff1}`,
-      `+ ${dataDiff2}`,
+      `  - ${dataDiff1}`,
+      `  + ${dataDiff2}`,
     ].join('\n');
   });
 
