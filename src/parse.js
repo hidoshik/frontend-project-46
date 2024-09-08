@@ -1,3 +1,5 @@
+import path from 'node:path';
+import fs from 'node:fs';
 import yaml from 'js-yaml';
 
 const parsers = {
@@ -6,6 +8,12 @@ const parsers = {
   yml: yaml.load,
 };
 
-const parse = (data, format) => parsers[format](data);
+const getFileFormat = (filepath) => path.extname(filepath).slice(1);
+
+const parse = (filepath) => {
+  const format = getFileFormat(filepath);
+  const file = fs.readFileSync(filepath, 'utf8');
+  return parsers[format](file);
+};
 
 export default parse;
