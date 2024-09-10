@@ -11,3 +11,9 @@
 [![asciicast](https://asciinema.org/a/YXQmwIAKWubuILciojaTUvITG.svg)](https://asciinema.org/a/YXQmwIAKWubuILciojaTUvITG)
 ### Generate difference in YAML files
 [![asciicast](https://asciinema.org/a/ntJsInfFMpen0QtaGpELPyaZr.svg)](https://asciinema.org/a/ntJsInfFMpen0QtaGpELPyaZr)
+### Generate difference in files with nested structure
+[![asciicast](https://asciinema.org/a/yzv8DoqVekcN30jgA4mnV93lo.svg)](https://asciinema.org/a/yzv8DoqVekcN30jgA4mnV93lo)
+### Generate difference in files using different output formats
+[![asciicast](https://asciinema.org/a/R2j0OIe6yCuaiTckYkDN9hZC5.svg)](https://asciinema.org/a/R2j0OIe6yCuaiTckYkDN9hZC5)
+### Generate difference in files using JSON format
+[![asciicast](https://asciinema.org/a/TeUvx4G0Qt6xrOZ3DCwW8Pkjv.svg)](https://asciinema.org/a/TeUvx4G0Qt6xrOZ3DCwW8Pkjv)
