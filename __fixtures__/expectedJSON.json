@@ -1,0 +1,116 @@
+[
+    {
+        "key": "common",
+        "state": "nested",
+        "value": [
+            {
+                "key": "follow",
+                "state": "added",
+                "value": false
+            },
+            {
+                "key": "setting1",
+                "state": "unchanged",
+                "value": "Value 1"
+            },
+            {
+                "key": "setting2",
+                "state": "removed",
+                "value": 200
+            },
+            {
+                "key": "setting3",
+                "state": "updated",
+                "oldValue": true,
+                "newValue": null
+            },
+            {
+                "key": "setting4",
+                "state": "added",
+                "value": "blah blah"
+            },
+            {
+                "key": "setting5",
+                "state": "added",
+                "value": {
+                    "key5": "value5"
+                }
+            },
+            {
+                "key": "setting6",
+                "state": "nested",
+                "value": [
+                    {
+                        "key": "doge",
+                        "state": "nested",
+                        "value": [
+                            {
+                                "key": "wow",
+                                "state": "updated",
+                                "oldValue": "",
+                                "newValue": "so much"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "key",
+                        "state": "unchanged",
+                        "value": "value"
+                    },
+                    {
+                        "key": "ops",
+                        "state": "added",
+                        "value": "vops"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "key": "group1",
+        "state": "nested",
+        "value": [
+            {
+                "key": "baz",
+                "state": "updated",
+                "oldValue": "bas",
+                "newValue": "bars"
+            },
+            {
+                "key": "foo",
+                "state": "unchanged",
+                "value": "bar"
+            },
+            {
+                "key": "nest",
+                "state": "updated",
+                "oldValue": {
+                    "key": "value"
+                },
+                "newValue": "str"
+            }
+        ]
+    },
+    {
+        "key": "group2",
+        "state": "removed",
+        "value": {
+            "abc": 12345,
+            "deep": {
+                "id": 45
+            }
+        }
+    },
+    {
+        "key": "group3",
+        "state": "added",
+        "value": {
+            "deep": {
+                "id": {
+                    "number": 45
+                }
+            },
+            "fee": 100500
+        }
+    }
+]
