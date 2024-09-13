@@ -1,52 +1,52 @@
 [
     {
         "key": "common",
-        "state": "nested",
-        "value": [
+        "type": "nested",
+        "children": [
             {
                 "key": "follow",
-                "state": "added",
+                "type": "added",
                 "value": false
             },
             {
                 "key": "setting1",
-                "state": "unchanged",
+                "type": "unchanged",
                 "value": "Value 1"
             },
             {
                 "key": "setting2",
-                "state": "removed",
+                "type": "removed",
                 "value": 200
             },
             {
                 "key": "setting3",
-                "state": "updated",
+                "type": "updated",
                 "oldValue": true,
                 "newValue": null
             },
             {
                 "key": "setting4",
-                "state": "added",
+                "type": "added",
                 "value": "blah blah"
             },
             {
                 "key": "setting5",
-                "state": "added",
+                "type": "added",
                 "value": {
                     "key5": "value5"
                 }
             },
             {
                 "key": "setting6",
-                "state": "nested",
-                "value": [
+                "type": "nested",
+                "children": [
                     {
                         "key": "doge",
-                        "state": "nested",
-                        "value": [
+                        "type": "nested",
+                        "children": [
                             {
                                 "key": "wow",
-                                "state": "updated",
+                                "type": "updated",
                                 "oldValue": "",
                                 "newValue": "so much"
                             }
@@ -54,12 +54,12 @@
                     },
                     {
                         "key": "key",
-                        "state": "unchanged",
+                        "type": "unchanged",
                         "value": "value"
                     },
                     {
                         "key": "ops",
-                        "state": "added",
+                        "type": "added",
                         "value": "vops"
                     }
                 ]
@@ -68,22 +68,22 @@
     },
     {
         "key": "group1",
-        "state": "nested",
-        "value": [
+        "type": "nested",
+        "children": [
             {
                 "key": "baz",
-                "state": "updated",
+                "type": "updated",
                 "oldValue": "bas",
                 "newValue": "bars"
             },
             {
                 "key": "foo",
-                "state": "unchanged",
+                "type": "unchanged",
                 "value": "bar"
             },
             {
                 "key": "nest",
-                "state": "updated",
+                "type": "updated",
                 "oldValue": {
                     "key": "value"
                 },
@@ -93,7 +93,7 @@
     },
     {
         "key": "group2",
-        "state": "removed",
+        "type": "removed",
         "value": {
             "abc": 12345,
             "deep": {
@@ -103,7 +103,7 @@
     },
     {
         "key": "group3",
-        "state": "added",
+        "type": "added",
         "value": {
             "deep": {
                 "id": {

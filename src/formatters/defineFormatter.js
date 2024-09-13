@@ -1,17 +1,17 @@
 import stylish from './stylish.js';
 import plain from './plain.js';
 
+const formatters = {
+  stylish: (tree) => stylish(tree),
+  plain: (tree) => plain(tree),
+  json: (tree, replacer = null, space = 4) => JSON.stringify(tree, replacer, space),
+};
+
 const defineFormatter = (tree, formatter) => {
-  if (formatter === 'stylish') {
-    return stylish(tree);
+  if (!Object.hasOwn(formatters, formatter)) {
+    throw new Error(`Invalid formatter - ${formatter}`);
   }
-  if (formatter === 'plain') {
-    return plain(tree);
-  }
-  if (formatter === 'json') {
-    return JSON.stringify(tree, null, 4);
-  }
-  throw new Error(`Invalid formatter - ${formatter}`);
+  return formatters[formatter](tree);
 };
 
 export default defineFormatter;

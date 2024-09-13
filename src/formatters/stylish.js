@@ -1,4 +1,4 @@
-const states = {
+const types = {
   added: '+ ',
   removed: '- ',
   unchanged: '  ',
@@ -35,19 +35,19 @@ const stylish = (tree, spacesCount = 4) => {
     const lastIndent = blank.repeat(indentSize);
 
     const {
-      key, state, value, oldValue, newValue,
+      key, type, value, oldValue, newValue,
     } = node;
 
-    if (node.state !== 'nested' && node.state !== 'updated') {
-      return `${currentIndent}${states[state]}${key}: ${stringify(value, depth)}`;
+    if (node.type !== 'nested' && node.type !== 'updated') {
+      return `${currentIndent}${types[type]}${key}: ${stringify(value, depth)}`;
     }
-    if (node.state === 'updated') {
-      return `${currentIndent}${states[state][0]}${key}: ${stringify(oldValue, depth)}\n${currentIndent}${states[state][1]}${key}: ${stringify(newValue, depth)}`;
+    if (node.type === 'updated') {
+      return `${currentIndent}${types[type][0]}${key}: ${stringify(oldValue, depth)}\n${currentIndent}${types[type][1]}${key}: ${stringify(newValue, depth)}`;
     }
-    if (node.state === 'nested') {
-      return `${currentIndent}${states[state]}${key}: {\n${node.value.map((el) => iter(el, depth + 1)).join('\n')}\n${lastIndent}}`;
+    if (node.type === 'nested') {
+      return `${currentIndent}${types[type]}${key}: {\n${node.children.map((el) => iter(el, depth + 1)).join('\n')}\n${lastIndent}}`;
     }
-    throw new Error(`Invalid node state - ${state}`);
+    throw new Error(`Invalid node type - ${type}`);
   };
 
   return `{\n${tree.map((el) => iter(el, 1)).join('\n')}\n}`;

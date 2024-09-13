@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/hidoshik/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/hidoshik/frontend-project-46/actions)",
+  "description": "This package contains the command line utility that lets you generate difference in JSON or YAML/YML files",
   "bin": {
     "gendiff": "bin/gendiff.js"
   },

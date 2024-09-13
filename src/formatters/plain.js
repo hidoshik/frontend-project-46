@@ -11,9 +11,9 @@ const getValue = (value) => {
 const plain = (tree) => {
   const iter = (node) => {
     const {
-      key, state, value, oldValue, newValue,
+      key, type, value, oldValue, newValue, children,
     } = node;
-    switch (node.state) {
+    switch (node.type) {
       case 'added':
         return `Property '${key}' was added with value: ${getValue(value)}`;
       case 'updated':
@@ -23,13 +23,13 @@ const plain = (tree) => {
       case 'removed':
         return `Property '${key}' was removed`;
       case 'nested':
-        return value.flatMap((item) => {
+        return children.flatMap((item) => {
           const newKey = `${key}.${item.key}`;
           const newEl = { ...item, key: newKey };
           return iter(newEl);
         });
       default:
-        throw new Error(`Invalid node state - ${state}`);
+        throw new Error(`Invalid node state - ${type}`);
     }
   };
   return tree.flatMap(iter).join('\n');
